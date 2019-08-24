@@ -22,3 +22,11 @@ func (s Scorer) Add(user string, points int) {
 	newScore := s.scores[user] + points
 	s.scores[user] = newScore
 }
+
+func (s Scorer) Subs(user string, points int) {
+	newScore := s.scores[user] - points
+	if newScore < 0 {
+		newScore = 0
+	}
+	s.scores[user] = newScore
+}

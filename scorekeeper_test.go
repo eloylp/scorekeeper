@@ -24,3 +24,16 @@ func TestAddPointsTwice(t *testing.T) {
 	scorer.Add("Sandy", 5)
 	assert.Equal(t, 15, scorer.Get("Sandy"))
 }
+
+func TestSubsPoints(t *testing.T)  {
+	scorer := scorekeeper.NewScorer()
+	scorer.Add("Sandy", 10)
+	scorer.Subs("Sandy", 5)
+	assert.Equal(t, 5, scorer.Get("Sandy"))
+}
+
+func TestNonNegativePoints(t *testing.T){
+	scorer := scorekeeper.NewScorer()
+	scorer.Subs("Sandy", 5)
+	assert.Equal(t, 0, scorer.Get("Sandy"))
+}
