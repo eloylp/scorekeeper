@@ -1,4 +1,4 @@
-module github.com/mec07/scorekeeper
+module github.com/eloylp/scorekeeper
 
 go 1.12
 

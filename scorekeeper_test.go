@@ -1,10 +1,9 @@
 package scorekeeper_test
 
 import (
-	"testing"
-
-	"github.com/mec07/scorekeeper"
+	"github.com/eloylp/scorekeeper"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestGetInitialScore(t *testing.T) {
